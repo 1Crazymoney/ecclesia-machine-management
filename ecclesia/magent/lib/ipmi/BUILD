@@ -9,6 +9,7 @@ cc_library(
     deps = [
         "@com_google_absl//absl/status",
         "@com_google_absl//absl/types:span",
+        "@ipmitool//:ipmi",
     ],
 )
 
