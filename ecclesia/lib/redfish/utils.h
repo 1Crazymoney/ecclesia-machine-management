@@ -56,7 +56,7 @@ struct SmartReading {
 //     "UpperThresholdCritical": 85
 // }
 inline bool ComponentIsEnabled(libredfish::RedfishObject *node_obj) {
-  auto status = node_obj->GetNode(libredfish::kRfPropertyStatus).AsObject();
+  auto status = (*node_obj)[libredfish::kRfPropertyStatus].AsObject();
   if (!status) return false;
   auto state = status->GetNodeValue<libredfish::PropertyState>();
   if (!state) return false;
